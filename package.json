@@ -1,0 +1,27 @@
+{
+  "name": "robotics",
+  "version": "0.0.1",
+  "description": "a little robot game",
+  "main": "target/robotics.js",
+  "scripts": {
+    "test": "node_modules/.bin/grunt"
+  },
+  "author": "meandmax <heinzmaximilian@googlemail.com> (http://maximilian-heinz.de/)",
+  "license": "MIT",
+  "devDependencies": {
+        "blanket": "latest",
+        "chai": "latest",
+        "grunt": "latest",
+        "grunt-babel": "latest",
+        "grunt-cli": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-jscs": "latest",
+        "grunt-mocha-test": "latest",
+        "load-grunt-tasks": "latest",
+        "mocha": "latest",
+        "mocha-cov-reporter": "latest",
+        "mocha-lcov-reporter": "latest",
+        "sinon": "latest",
+        "time-grunt": "latest"
+  }
+}
