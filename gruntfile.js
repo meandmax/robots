@@ -80,7 +80,7 @@ module.exports = function (grunt) {
                     reporter: 'spec'
                 },
 
-                src: 'target/test/*.test.js'
+                src: 'target/test/**/*.test.js'
             },
 
             'html-cov': {
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
                     reporter: 'html-cov'
                 },
 
-                src: 'target/test/*.test.js'
+                src: 'target/test/**/*.test.js'
             },
 
             'console-cov': {
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
                     reporter: 'mocha-cov-reporter'
                 },
 
-                src: 'target/test/*.test.js'
+                src: 'target/test/**/*.test.js'
             },
 
             'lcov-cov': {
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
                     reporter: 'mocha-lcov-reporter'
                 },
 
-                src: 'target/test/*.test.js'
+                src: 'target/test/**/*.test.js'
             }
         }
     });
