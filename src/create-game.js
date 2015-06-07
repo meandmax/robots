@@ -5,9 +5,10 @@ import createWorld from './create-world';
 
 const direction = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
 
-const placed = false;
+let placed = false;
 
 export default function () {
+    var robot = createRobot();
 
     const world = createWorld({
         width: 5,
@@ -15,6 +16,10 @@ export default function () {
     });
 
     const report = function () {
+        if (!placed) {
+            return;
+        }
+
         return {
             x: robot.getX(),
             y: robot.getY(),
@@ -27,19 +32,23 @@ export default function () {
             robot.setX(x);
             robot.setY(y);
             robot.setF(direction.indexOf(f));
-        }
 
-        if (!placed) {
-            placed = true;
+            if (!placed) {
+                placed = true;
+            }
         }
     };
 
     const left = function () {
-        robot.setF(robot.getF() - 1);
+        if (placed) {
+            robot.setF(robot.getF() - 1);
+        }
     };
 
     const right = function () {
-        robot.setF(robot.getF() + 1);
+        if (placed) {
+            robot.setF(robot.getF() + 1);
+        }
     };
 
     const move = function () {
@@ -76,7 +85,7 @@ export default function () {
             }
         }
 
-        if (world.isMoveable(x, y)) {
+        if (world && placed && world.isMoveable(x, y)) {
             robot.setX(x);
             robot.setY(y);
         }
