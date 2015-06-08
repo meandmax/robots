@@ -28,7 +28,7 @@ export default function (spec) {
         },
 
         isMoveable: (x, y) => {
-            return x < state.width && y < state.height;
+            return x >= 0 && x < state.width && y >= 0 && y < state.height;
         }
     });
 }
