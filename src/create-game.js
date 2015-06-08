@@ -17,7 +17,7 @@ export default function () {
 
     const report = function () {
         if (!placed) {
-            return;
+            return false;
         }
 
         return {
@@ -28,7 +28,7 @@ export default function () {
     };
 
     const place = function (x, y, f) {
-        if (y <= world.getHeight() && x <= world.getWidth()) {
+        if (world.isMoveable(x, y)) {
             robot.setX(x);
             robot.setY(y);
             robot.setF(direction.indexOf(f));
@@ -36,6 +36,8 @@ export default function () {
             if (!placed) {
                 placed = true;
             }
+
+            return true;
         }
     };
 
