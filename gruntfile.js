@@ -15,6 +15,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         babel: {
+            options: {
+                stage: '0'
+            },
+
             test: {
                 files: [
                     {
@@ -38,6 +42,20 @@ module.exports = function (grunt) {
                         dest: 'target/src',
                         filter: 'isFile'
                     }
+                ]
+            }
+        },
+
+        watch: {
+            all: {
+                files: [
+                    'src/**',
+                    'test/**',
+                    'Gruntfile.js'
+                ],
+
+                tasks: [
+                    'build'
                 ]
             }
         },
@@ -123,6 +141,17 @@ module.exports = function (grunt) {
         'mochaTest:html-cov',
         'mochaTest:console-cov',
         'mochaTest:lcov-cov'
+    ]);
+
+    grunt.registerTask('build', [
+        'babel',
+        'lint',
+        'test'
+    ]);
+
+    grunt.registerTask('start', [
+        'build',
+        'watch'
     ]);
 
     grunt.registerTask('default', [
