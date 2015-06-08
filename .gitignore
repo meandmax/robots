@@ -1,13 +1,12 @@
 *.sublime-workspace
 *.sublime-project
 
-build/
+target/
 node_modules/
 npm-debug.log
 
 .AppleDouble/
 .DS_Store
 
-TODO
 test/coverage.html
 test/lcov.info
