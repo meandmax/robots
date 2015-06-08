@@ -53,7 +53,10 @@ describe('createGame()', () => {
 
             assert.strictEqual(game.report().f, 'WEST');
 
-            game.place(0, 0, 'SOUTH');
+            game.left();
+
+            assert.strictEqual(game.report().f, 'SOUTH');
+
             game.left();
 
             assert.strictEqual(game.report().f, 'EAST');
@@ -71,7 +74,10 @@ describe('createGame()', () => {
 
             assert.strictEqual(game.report().f, 'NORTH');
 
-            game.place(0, 0, 'EAST');
+            game.right();
+
+            assert.strictEqual(game.report().f, 'EAST');
+
             game.right();
 
             assert.strictEqual(game.report().f, 'SOUTH');
@@ -111,6 +117,18 @@ describe('createGame()', () => {
             assert.strictEqual(game.report().x, 3);
             assert.strictEqual(game.report().y, 3);
             assert.strictEqual(game.report().f, 'NORTH');
+        });
+
+        it('has to be at 2, 3, SOUTH', () => {
+            game.place(4, 4, 'WEST');
+            game.move();
+            game.move();
+            game.left();
+            game.move();
+
+            assert.strictEqual(game.report().x, 2);
+            assert.strictEqual(game.report().y, 3);
+            assert.strictEqual(game.report().f, 'SOUTH');
         });
     });
 
