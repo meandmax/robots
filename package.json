@@ -1,27 +1,31 @@
 {
-  "name": "robotics",
+  "name": "robots",
   "version": "0.0.1",
-  "description": "a little robot game",
-  "main": "target/robotics.js",
+  "description": "a little robot roaming on a square table-top",
+  "main": "target/",
   "scripts": {
     "test": "node_modules/.bin/grunt"
   },
-  "author": "meandmax <heinzmaximilian@googlemail.com> (http://maximilian-heinz.de/)",
+  "bin": {
+    "robots": "binary/robots.js"
+  },
+  "author": "meandmax <info@maximilian-heinz.de> (http://maximilian-heinz.de/)",
   "license": "MIT",
   "devDependencies": {
-        "blanket": "latest",
-        "chai": "latest",
-        "grunt": "latest",
-        "grunt-babel": "latest",
-        "grunt-cli": "latest",
-        "grunt-contrib-jshint": "latest",
-        "grunt-jscs": "latest",
-        "grunt-mocha-test": "latest",
-        "load-grunt-tasks": "latest",
-        "mocha": "latest",
-        "mocha-cov-reporter": "latest",
-        "mocha-lcov-reporter": "latest",
-        "sinon": "latest",
-        "time-grunt": "latest"
+    "blanket": "latest",
+    "chai": "latest",
+    "colors": "latest",
+    "grunt": "latest",
+    "grunt-babel": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-jscs": "latest",
+    "grunt-mocha-test": "latest",
+    "load-grunt-tasks": "latest",
+    "mocha": "latest",
+    "mocha-cov-reporter": "latest",
+    "mocha-lcov-reporter": "latest",
+    "time-grunt": "latest"
   }
 }
