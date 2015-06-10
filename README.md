@@ -29,6 +29,10 @@ If the package is installed globally you can just run:
 
 ## Commands
 
+<p align="center">
+  <img src="./robots.png" />
+</p>
+
 #### PLACE X Y F
 
 Put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. If the robot is already placed, issuing another valid PLACE command will place the robot in the newly specified location.
