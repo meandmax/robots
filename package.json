@@ -14,6 +14,7 @@
   "devDependencies": {
     "blanket": "latest",
     "chai": "latest",
+    "codeclimate-test-reporter": "latest",
     "colors": "latest",
     "grunt": "latest",
     "grunt-babel": "latest",
