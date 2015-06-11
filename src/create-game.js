@@ -28,7 +28,7 @@ export default function () {
     };
 
     const place = function (x, y, f) {
-        if (world.isMoveable(x, y)) {
+        if (direction.indexOf(f) !== -1 && world.isMoveable(x, y)) {
             robot.setX(x);
             robot.setY(y);
             robot.setF(direction.indexOf(f));
