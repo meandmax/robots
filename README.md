@@ -7,7 +7,7 @@
 [![dependencies](http://img.shields.io/david/meandmax/robots.svg?style=flat-square)](https://david-dm.org/meandmax/robots#info=dependencies&view=table)
 [![dev dependencies](http://img.shields.io/david/dev/meandmax/robots.svg?style=flat-square)](https://david-dm.org/meandmax/robots#info=devDependencies&view=table)
 
-A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
+A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units. It´s written in ecmascript 6 & 7 features and tested with mocha and chai.
 
 ## Installation
 
